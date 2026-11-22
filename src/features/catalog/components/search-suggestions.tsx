@@ -19,7 +19,8 @@ export function SearchSuggestions({ defaultValue, inputClassName }: SearchSugges
   const router = useRouter();
   const listId = useId();
   const [value, setValue] = useState(defaultValue);
-  const [suggestions, setSuggestions] = useState<Suggestion[] | null>(null);
+  // Gắn kết quả với từ khóa đã hỏi: gõ tiếp, xóa bớt hay API lỗi thì không hiện danh sách cũ.
+  const [result, setResult] = useState<{ keyword: string; suggestions: Suggestion[] } | null>(null);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(-1);
 
@@ -33,9 +34,12 @@ export function SearchSuggestions({ defaultValue, inputClassName }: SearchSugges
         const response = await fetch(`/api/products/suggest?q=${encodeURIComponent(keyword)}`, {
           signal: controller.signal,
         });
-        if (!response.ok) return;
+        if (!response.ok) {
+          setResult(null);
+          return;
+        }
         const body = (await response.json()) as { suggestions: Suggestion[] };
-        setSuggestions(body.suggestions);
+        setResult({ keyword, suggestions: body.suggestions });
         setActive(-1);
       } catch {
         // Người dùng gõ tiếp (request bị hủy) hoặc mất mạng: giữ nguyên danh sách cũ.
@@ -47,6 +51,7 @@ export function SearchSuggestions({ defaultValue, inputClassName }: SearchSugges
     };
   }, [keyword]);
 
+  const suggestions = result?.keyword === keyword ? result.suggestions : null;
   const showList = open && keyword.length >= MIN_QUERY_LENGTH && suggestions !== null;
 
   function openProduct(slug: string) {
@@ -119,7 +124,14 @@ export function SearchSuggestions({ defaultValue, inputClassName }: SearchSugges
                 )}
               >
                 <span className="text-slate-900">{suggestion.name}</span>
-                <span className="shrink-0 text-slate-500">{formatCurrency(suggestion.price)}</span>
+                <span className="flex shrink-0 items-center gap-2">
+                  {!suggestion.inStock && (
+                    <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-500">
+                      Hết hàng
+                    </span>
+                  )}
+                  <span className="text-slate-500">{formatCurrency(suggestion.price)}</span>
+                </span>
               </li>
             ))
           )}
