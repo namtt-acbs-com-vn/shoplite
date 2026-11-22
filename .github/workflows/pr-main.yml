@@ -1,0 +1,35 @@
+# Workflow đơn giản cho PR vào main: chạy đúng Definition of Done trong AGENTS.md
+# (npm run check = lint + typecheck + test, cộng format:check).
+name: PR vào main
+
+on:
+  pull_request:
+    branches: [main]
+
+# Chỉ cần đọc code.
+permissions:
+  contents: read
+
+# Đẩy commit mới lên PR thì hủy lượt chạy cũ.
+concurrency:
+  group: pr-main-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  kiem-tra:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - name: Cài dependency
+        run: npm ci
+      - name: Lint + typecheck + test
+        run: npm run check
+      - name: Kiểm format
+        run: npm run format:check
