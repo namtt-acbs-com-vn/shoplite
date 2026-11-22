@@ -1,0 +1,20 @@
+# Cấu hình gitleaks của ShopLite (job bao-mat trong .github/workflows/ci.yml).
+# Dùng toàn bộ luật mặc định, chỉ thêm ngoại lệ có lý do. Mỗi ngoại lệ phải được người review duyệt.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Manifest do trình cài BMAD sinh ra: cột hash của từng file bị luật generic-api-key nhận nhầm là khoá"
+paths = ['''^_bmad/_config/files-manifest\.csv$''']
+
+[[allowlists]]
+description = "Thư mục build .next-manual bị commit nhầm ở 31b233c (đã xóa ở commit sau): khoá preview mode Next.js tự sinh cho dev server, không phải khoá dịch vụ"
+condition = "AND"
+commits = ["31b233cfd8943a73a80d245bbd66df94c977fefe"]
+paths = ['''^\.next-manual/''']
+
+[[allowlists]]
+description = "Mật khẩu quản trị chỉ dùng cho E2E (ADMIN_TEST_PASSWORD), cố ý giữ trong playwright.config.ts; chỉ bỏ qua commit đã thêm nó"
+condition = "AND"
+commits = ["ca20b174a15104e87c8bdb3dfd440d96d5f51a16"]
+paths = ['''^playwright\.config\.ts$''']
