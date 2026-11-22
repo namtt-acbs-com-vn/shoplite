@@ -68,6 +68,37 @@ describe("<SearchSuggestions />", () => {
     expect(push).toHaveBeenCalledWith("/products/micro-podcast");
   });
 
+  it("bấm chuột vào gợi ý mở trang sản phẩm đó", async () => {
+    respond(200, { suggestions: USB });
+    const user = userEvent.setup();
+    await user.type(renderBox(), "usb");
+
+    await user.click(await screen.findByRole("option", { name: /Cáp USB-C/ }));
+    expect(push).toHaveBeenCalledWith("/products/cap-usb-c");
+  });
+
+  it("Enter khi chưa chọn gợi ý không mở sản phẩm và đóng danh sách", async () => {
+    respond(200, { suggestions: USB });
+    const user = userEvent.setup();
+    await user.type(renderBox(), "usb");
+    await screen.findByRole("listbox");
+
+    await user.keyboard("{Enter}");
+    expect(push).not.toHaveBeenCalled();
+    expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
+  });
+
+  it("chờ 300 ms sau lần gõ cuối mới gọi API, chỉ một lần cho từ khóa cuối", async () => {
+    respond(200, { suggestions: USB });
+    const user = userEvent.setup();
+    await user.type(renderBox(), "usb");
+
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    expect(fetchMock).not.toHaveBeenCalled();
+    await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));
+    expect(fetchMock).toHaveBeenCalledWith("/api/products/suggest?q=usb", expect.anything());
+  });
+
   it("Esc đóng danh sách", async () => {
     respond(200, { suggestions: USB });
     const user = userEvent.setup();

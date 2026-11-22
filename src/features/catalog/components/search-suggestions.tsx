@@ -67,7 +67,12 @@ export function SearchSuggestions({ defaultValue, inputClassName }: SearchSugges
     } else if (event.key === "ArrowUp") {
       event.preventDefault();
       setActive((current) => Math.max(current - 1, -1));
-    } else if (event.key === "Enter" && active >= 0) {
+    } else if (event.key === "Enter") {
+      if (active < 0) {
+        // Chưa chọn gợi ý: để form gửi như nút "Tìm kiếm", chỉ đóng danh sách.
+        setOpen(false);
+        return;
+      }
       event.preventDefault();
       openProduct(suggestions[active].slug);
     } else if (event.key === "Escape") {
@@ -90,7 +95,7 @@ export function SearchSuggestions({ defaultValue, inputClassName }: SearchSugges
         onBlur={() => setOpen(false)}
         role="combobox"
         aria-expanded={showList}
-        aria-controls={listId}
+        aria-controls={showList ? listId : undefined}
         aria-autocomplete="list"
         aria-activedescendant={showList && active >= 0 ? `${listId}-${active}` : undefined}
         autoComplete="off"
