@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ebb7f607-3693-4375-b5c8-836844c92519" name="Changes" comment="module 4-5-6">
+      <change beforePath="$PROJECT_DIR$/src/features/catalog/components/search-suggestions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/catalog/components/search-suggestions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/catalog/components/search-suggestions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/catalog/components/search-suggestions.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/td-macbook-08/project_ai" value="3LnxWO7XftTIQmT6PJDvnBbbl2I" />
+    </persistenceIdMap>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="bmad/module4_NamttAcbs" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;namtt-acbs-com-vn&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/trandinhduc/shoplite&quot;,
+    &quot;accountId&quot;: &quot;8568d01e-d516-45bd-a718-6e02c490ce07&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LnxWO7XftTIQmT6PJDvnBbbl2I" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "feature/goi-y-tim-kiem",
+    "git.auto.fetch.suggestion.counter": "3",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/td-macbook-08/project_ai",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Users/td-macbook-08/project_ai/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$/scripts/ci" />
+      <recent name="$PROJECT_DIR$/specs" />
+      <recent name="$PROJECT_DIR$/.claude" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3bd3a6803838-JavaScript-WS-261.22158.274" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebb7f607-3693-4375-b5c8-836844c92519" name="Changes" comment="" />
+      <created>1794103663785</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794103663785</updated>
+      <workItem from="1794103664833" duration="23063000" />
+      <workItem from="1794131507462" duration="10708000" />
+      <workItem from="1794387057863" duration="2387000" />
+      <workItem from="1795082462777" duration="29882000" />
+    </task>
+    <task id="LOCAL-00001" summary="module-1-ai-coding-agent">
+      <option name="closed" value="true" />
+      <created>1794113503772</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1794113503772</updated>
+    </task>
+    <task id="LOCAL-00002" summary="module-2-ai-coding-agent: done plan">
+      <option name="closed" value="true" />
+      <created>1794125735095</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1794125735095</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2.4 done">
+      <option name="closed" value="true" />
+      <created>1794126924332</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1794126924332</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2.5 done">
+      <option name="closed" value="true" />
+      <created>1794130256269</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1794130256269</updated>
+    </task>
+    <task id="LOCAL-00005" summary="done module 3">
+      <option name="closed" value="true" />
+      <created>1795225127774</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1795225127774</updated>
+    </task>
+    <task id="LOCAL-00006" summary="module 4-5-6">
+      <option name="closed" value="true" />
+      <created>1795311831990</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1795311831991</updated>
+    </task>
+    <task id="LOCAL-00007" summary="module 4-5-6">
+      <option name="closed" value="true" />
+      <created>1795311883907</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1795311883907</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="bmad/module4" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="module-1-ai-coding-agent" />
+    <MESSAGE value="module-2-ai-coding-agent: done plan" />
+    <MESSAGE value="2.4 done" />
+    <MESSAGE value="2.5 done" />
+    <MESSAGE value="done module 3" />
+    <MESSAGE value="module 4-5-6" />
+    <option name="LAST_COMMIT_MESSAGE" value="module 4-5-6" />
+  </component>
+</project>
